@@ -26,9 +26,36 @@ public class RoomFilesController {
 
     private Path basePath;
 
+    /** Formats autorisés : maximum de formats pour le travail collaboratif (documents, MCD/Looping, modélisation, CAO/3D, code, médias). */
     private static final Set<String> ALLOWED_EXTENSIONS = Set.of(
-            "pdf", "png", "jpg", "jpeg", "gif", "webp", "svg", "txt", "md",
-            "doc", "docx", "xls", "xlsx", "odt", "ods", "drawio", "json", "csv"
+            /* Documents */
+            "pdf", "txt", "md", "rtf",
+            "doc", "docx", "odt", "ott",
+            "xls", "xlsx", "ods", "ots", "csv",
+            "ppt", "pptx", "odp", "otp",
+            "odg", "otg", "odc", "odf", "odb", "odm", "odi", "oth", "otf",
+            /* Images & vectoriel */
+            "png", "jpg", "jpeg", "gif", "webp", "svg", "eps", "ai", "psd", "sketch", "xd",
+            /* Schémas & diagrammes */
+            "drawio", "vsdx", "vsd", "excalidraw", "xml",
+            /* MCD / Looping / modélisation de données */
+            "loo", "mcd", "merise", "cdm", "bpmn", "xmi", "uml", "er", "erd",
+            /* CAO / 3D */
+            "blend", "obj", "stl", "3ds", "dae", "step", "stp", "iges", "igs", "glb", "gltf", "dxf", "dwg",
+            /* Données & config */
+            "json", "sql", "yaml", "yml", "toml",
+            /* Cartes mentales / plan */
+            "xmind", "mm", "opml",
+            /* Publication */
+            "tex", "epub",
+            /* Archives */
+            "zip", "tar", "gz",
+            /* Code (travail collaboratif) */
+            "py", "js", "ts", "jsx", "tsx", "vue", "html", "css", "scss", "java", "c", "cpp", "h", "rs", "go", "php", "rb", "sh", "bat", "kt", "swift",
+            /* Média (cours, démos) */
+            "mp3", "mp4", "webm", "ogg", "wav", "m4a",
+            /* Polices */
+            "ttf", "otf", "woff", "woff2"
     );
     private static final long MAX_FILE_SIZE = 50 * 1024 * 1024; // 50 Mo
 

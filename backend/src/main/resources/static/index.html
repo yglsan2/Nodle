@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Nodle</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    code { background: #eee; padding: 0.2em 0.4em; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Nodle</h1>
+  <p>Ce JAR est lancé en <strong>mode logiciel Java</strong> mais l’interface n’a pas encore été intégrée.</p>
+  <p>Pour obtenir l’application complète (web + API dans un seul JAR) :</p>
+  <ol>
+    <li>Construire le frontend : <code>cd frontend && npm install && npm run build</code></li>
+    <li>Reconstruire le backend avec le profil : <code>cd backend && mvn package -Pwith-frontend</code></li>
+  </ol>
+  <p>Puis relancer ce JAR : l’interface sera disponible à la même adresse (ex. <a href="/">/</a>).</p>
+  <p>Vous pouvez aussi utiliser Nodle en <strong>mode web</strong> (frontend et backend séparés) ou en <strong>application Android</strong> (APK) — voir le README.</p>
+</body>
+</html>
